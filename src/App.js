@@ -21,7 +21,7 @@ function App() {
     } catch (e) {
       console.warn(e)
     }
-  })
+  },[])
 
   return (
     <>

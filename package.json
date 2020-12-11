@@ -14,8 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "node scripts/populate-blog-posts.js && react-scripts build && npm run copy",
-    "copy": "rm -rf docs/* && mkdir docs && cp -r build/* docs",
+    "build": "node scripts/populate-blog-posts.js && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
