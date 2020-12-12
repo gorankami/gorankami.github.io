@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
-
 :root {
   --clr-text: #5f5f5f;
   --clr-accent: #7849ff;
-  --clr-menu-text: #f7f4ff;
-  --clr-bg: #dadfe7;
+  --clr-menu-text: #e8eef2;
+  --clr-bg: #33363c;
   --clr-fg: #fff;
   --clr-loss: #ff5353;
   --clr-selection-gain: #1be1af;
   --clr-text-secondary: #848484;
-  --clr-nav-bg: #565656;
+  --clr-nav-bg: #24222d;
 }
 
 html {
@@ -23,8 +21,9 @@ html {
 }
 
 body {
-  font-family: 'Ubuntu Mono', monospace;
-  background-color: black;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  background-color: var(--clr-bg);
   color: var(--clr-menu-text);
   line-height: 1.6;
 }
@@ -65,6 +64,10 @@ h2 small {
 }
 
 .nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -81,7 +84,7 @@ h2 small {
 }
 .nav li button.active {
   /* background-color: #4caf50; */
-  border-bottom: 4px solid var(--clr-selection-gain);
+  border-top: 4px solid var(--clr-selection-gain);
   color: var(--clr-selection-gain);
 }
 
