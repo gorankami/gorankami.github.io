@@ -1,14 +1,27 @@
-import React from 'react'
-import ReactMarkdown from 'react-markdown'
+import React, { useEffect, useState } from 'react'
+import { getPosts } from './bloggerAPI'
+import Post from './Post'
 
-export default function Blog({ posts }) {
+var cache = []
+
+export default function Blog() {
+  const PR = window.PR
+  const [posts, setPosts] = useState(cache)
+
+  useEffect(() => {
+    getPosts()
+      .then((res) => res.json())
+      .then((res) => {
+        setPosts(res.items)
+        cache = res.items
+        PR.prettyPrint()
+      })
+  }, [])
+
   return (
     <>
       {posts.map((p, i) => (
-        <div key={i}>
-          <ReactMarkdown>{p.markdown}</ReactMarkdown>
-          <hr />
-        </div>
+        <Post key={i} post={p} />
       ))}
     </>
   )

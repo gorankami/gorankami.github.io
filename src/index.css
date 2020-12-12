@@ -30,7 +30,7 @@ body {
 }
 
 p {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 ul {
@@ -42,8 +42,10 @@ a {
   color: var(--clr-selection-gain);
 }
 
-h1 small {
+h1 small,
+h2 small {
   color: var(--clr-text-secondary);
+  font-size: large;
 }
 
 .home-avatar {
@@ -55,6 +57,7 @@ h1 small {
 .main-content {
   margin: 0 auto;
   max-width: 800px;
+  padding: 20px 50px;
 }
 
 .text-center {
@@ -76,17 +79,21 @@ h1 small {
 .brand {
   font-weight: 500;
 }
-.nav li a.active {
+.nav li button.active {
   /* background-color: #4caf50; */
   border-bottom: 4px solid var(--clr-selection-gain);
   color: var(--clr-selection-gain);
 }
 
-.nav li a,
+.nav li button,
 .nav li div {
   display: inline-block;
   color: white;
   text-align: center;
   padding: 13px 16px;
   text-decoration: none;
+  background-color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
 }
