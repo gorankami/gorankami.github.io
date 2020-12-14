@@ -41,62 +41,7 @@ a {
   color: var(--clr-selection-gain);
 }
 
-h1 small,
-h2 small {
-  color: var(--clr-text-secondary);
-  font-size: large;
-}
-
-.home-avatar {
-  border-radius: 50%;
-  margin-top: 8px;
-  margin-left: 8px;
-}
-
-.main-content {
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 20px 50px;
-}
-
 .text-center {
   text-align: center;
 }
 
-.nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-.nav li {
-  float: left;
-}
-
-.brand {
-  font-weight: 500;
-}
-.nav li button.active {
-  /* background-color: #4caf50; */
-  border-top: 4px solid var(--clr-selection-gain);
-  color: var(--clr-selection-gain);
-}
-
-.nav li button,
-.nav li div {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 13px 16px;
-  text-decoration: none;
-  background-color: inherit;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-}
