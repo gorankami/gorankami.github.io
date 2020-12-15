@@ -1,1 +1,0 @@
-const canvas = document.querySelector("#canvasTransformationEditor").getContext("2d")
