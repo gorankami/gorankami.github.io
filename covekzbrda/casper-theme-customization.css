@@ -1,0 +1,24 @@
+:root {
+  --darkmode: #33363c;
+}
+.post-full-content code {
+  color: #f96f2d;
+}
+.post-full-content p code {
+  word-break: keep-all;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #e8eef2;
+  }
+  .post-full-content code {
+    color: #f96f2d;
+    background: inherit;
+  }
+}
+
+.post-card-excerpt,
+.post-full-content {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
