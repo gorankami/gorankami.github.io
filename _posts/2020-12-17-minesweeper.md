@@ -5,9 +5,9 @@ date:   2020-12-17
 categories: javascript
 ---
 
-![Minesweeper thumbnail](/assets/screenshot.jpg)
+![Minesweeper thumbnail](/assets/minesweeper-thumb.png)
 
-You can find the code here: [https://github.com/gorankami/minesweeper](https://github.com/gorankami/minesweeper)
+You can find the code here: [https://github.com/gorankami/minesweeper](https://gorankami.github.io/minesweeper/)
 
 About 4 or 5 years ago, I was applying for a front end job based in San Francisco. I received a task for technical assessment - build a minesweeper clone!  
 I was happy for the task because it was the most fun I had doing something for someone else and not getting paid for it. It was an opportunity for me to play with 
