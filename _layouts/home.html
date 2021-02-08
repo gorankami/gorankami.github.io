@@ -9,29 +9,6 @@ layout: default
 
   {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 
-  {%- if site.categories.microblog.size > 0 -%}
-
-  <style>
-    @media screen and (min-width: 1280px) {
-      .main-posts {
-        float: left;
-        width: 60%;
-      }
-      .main-microblog {
-        float:right;
-        width: 35%;
-      }
-    }
-  </style>
-  <div class="main-microblog">
-    <h3>Microblog</h3>
-    {% for post in site.categories.microblog limit:3 %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-        {{ post.excerpt }}
-    {% endfor %}
-  </div>
-  {%- endif -%}
-  
   {{ content }}
 
 
@@ -41,18 +18,23 @@ layout: default
     {% assign posts = site.posts %}
   {% endif %}
 
-  <div class="main-posts">
     {%- if posts.size > 0 -%}
       {%- if page.list_title -%}
         <h3 class="post-list-heading">{{ page.list_title }}</h3>
       {%- endif -%}
       <ul class="post-list">
         {%- for post in posts -%}
-          {% unless post.category == "microblog" %}
+        <li>
 
-
-          <li>
+          <a class="post-link" href="{{ post.url | relative_url }}">
             <span class="post-meta">{{ post.date | date: date_format }}</span>
+            {% if post.category %}
+            <span class="post-meta"> {{post.category}}</span>
+            {%- endif -%}
+          </a>
+          {%- if post.category == "microblog" -%}
+              {{ post.excerpt  }}
+          {%- else -%}
             <h3>
               <a class="post-link" href="{{ post.url | relative_url }}">
                 {{ post.title | escape }}
@@ -61,8 +43,10 @@ layout: default
             {%- if site.show_excerpts -%}
               {{ post.excerpt }}
             {%- endif -%}
+          
+          {%- endif -%}
+
           </li>
-          {% endunless %}
         {%- endfor -%}
       </ul>
 
@@ -85,6 +69,4 @@ layout: default
       {%- endif %}
 
     {%- endif -%}
-  </div>
-
 </div>

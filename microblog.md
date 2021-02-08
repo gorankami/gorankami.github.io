@@ -11,8 +11,12 @@ permalink: /microblog/
     {% assign posts = site.categories.microblog %}
 {% endif %}
 
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
 {% for post in site.categories.microblog %}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
+    <a class="post-link" href="{{ post.url | relative_url }}">
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+    </a>
     {{ post.excerpt }}
 {% endfor %}
 
