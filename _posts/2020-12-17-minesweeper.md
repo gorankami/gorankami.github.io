@@ -2,7 +2,8 @@
 layout: post
 title:  "Building a minesweeper clone"
 date:   2020-12-17
-categories: javascript
+category: projects
+tags: javascript jobs
 ---
 
 ![Minesweeper thumbnail](/assets/minesweeper-thumb.png)
