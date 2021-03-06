@@ -15,6 +15,15 @@ Podeliću kako ja to radim, kao primer, na osnovu nekih stvari koje sam pokupio 
 
 Ako pišete u svesci, dnevnik počinje na novoj strani (ako niste štedljivi - na levoj strani sveske). Dnevnik treba imati datum i dan u nedelji. Može sadržati podatke dnevne jutarnje rutine, zavisno od potrebe (praćenje težine, lekova, novca na računu itd). A ako pišete na računaru, svaki fajl je novi unos u dnevnik. Na računaru koristim `markdown` jezik i generator za blog kao pomoćno sredstvo. Lično preferiram format imenovanja fajla `{godina}-{mesec}-{dan}-{dan u nedelji}` (na primer `2021-03-26-Subota.md`). Vodite računa o smeštanju podataka, sa jedne strane računar koji je povezan na internet mrežu je uvek u situaciji da sadržaj završi u javnosti a sa druge strane se, zbog nepredvidivih situacija, mogu izgubiti svi podaci, pritom prenosivi mediji ne mogu uvek da istraju onoliko koliko od njih očekujemo, pa je lični sud i pažnja ovde presudan.
 
+``` markdown
+# i3 tastatura i vscode zen mode
+Otkrio sam na i3 kako se podešava layout za tastaturu na srpski, s obzirom da sam krenuo na srpskom da pišem, to je komanda:
+`setxkbmap -layout rs -variant latin`
+Ako želim da vratim tastaturu na us engleski, komanda je:
+`setxkbmap -layout us`.
+```
+
+
 Dnevnik nije potrebno pisati baš svaki dan, ali je zgodno makar posvetiti malo vremena radi održavanja rutine. Sadržaj će sigurno varirati, od oskudne liste planiranih aktivnosti do velikih raspisivanja, zavisi od toga šta želite i šta vam je bitno da sačuvate od sećanja. Možete pisati neke priče od značaja, neke detalje bi ste inače zaboravili, ali isto tako možete pisati o stvarima iz prošlosti. 
 > Obratite pažnju na granularnost privatnosti (svoje i drugih), koju morate ceniti ukoliko se desi da neko može doći do sadržaja dnevnika i te podatke zloupotrebi.
 
