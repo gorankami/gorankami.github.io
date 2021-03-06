@@ -67,6 +67,26 @@ Pisanje je najzgodnije u prostoru bez izvora ometanja, na urednom stolu, kako bi
 
 ![thinkpad x230i sa ovom stranicom](/assets/dnevnik-thinkpad.jpg)
 
-# Kako čitam dnevnik na računaru
+# Pisanje i čitanje uz Jekyll
 
-Iako postoje čitači za markdown, razlog zašto imam standardizovan format datoteke (sa primera gore) je taj što za blog koristim isti alat - `jekyll`. To je blog generator za jednostavne članke koji se meni čini idealnim za dnevnik (journal).
+Razlog zašto imam standardizovan format datoteke (sa primera gore) je taj što koristim alat `jekyll` ([https://jekyllrb.com/](https://jekyllrb.com/)). To je blog generator za jednostavne članke koji se meni čini idealnim za dnevnik (journal) i koristim potpuno isti sistem za ovaj blog.
+
+Za instalaciju je potreban `ruby`, i možete ispratiti njihova upustva za instalaciju. Ono što sam dodao svom projektu je i skripta za kreiranje nove strane u dnevniku:
+
+``` sh
+#!/bin/bash
+
+DATE="$(date +%F)"
+FILENAME="_drafts/journal/$DATE-$(date +"%A-%H:%M").md"
+
+if [[ -f $FILENAME ]];then
+    echo "$FILENAME exists"
+else
+    touch $FILENAME
+    echo '---' >> $FILENAME
+    echo "date: $DATE" >> $FILENAME
+    echo -e 'tags:\ncategory: journal\n---\n' >> $FILENAME
+fi
+```
+
+Ova skripta kreira ime fajla po današnjem datumu i popuni u fajlu metapodatke za datum i kategoriju journal. Meni ostaje samo da počnem sa pisanjem.
