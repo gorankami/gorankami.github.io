@@ -70,5 +70,3 @@ Pisanje je najzgodnije u prostoru bez izvora ometanja, na urednom stolu, kako bi
 # Kako čitam dnevnik na računaru
 
 Iako postoje čitači za markdown, razlog zašto imam standardizovan format datoteke (sa primera gore) je taj što za blog koristim isti alat - `jekyll`. To je blog generator za jednostavne članke koji se meni čini idealnim za dnevnik (journal).
-
-# Referentne teme o pisanju
