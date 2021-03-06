@@ -22,4 +22,4 @@ Pisanje je najzgodnije u prostoru bez izvora ometanja, na urednom stolu, kako bi
 
 Srećno pisanje!
 
-![thinkpad x230i sa ovom stranicom](/assets/dnevnik-thinkpad.png)
+![thinkpad x230i sa ovom stranicom](/assets/dnevnik-thinkpad.jpg)
