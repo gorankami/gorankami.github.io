@@ -21,3 +21,5 @@ Dnevnik nije potrebno pisati baš svaki dan, ali je zgodno makar posvetiti malo 
 Pisanje je najzgodnije u prostoru bez izvora ometanja, na urednom stolu, kako bi se sa pisanjem brzo završilo bez spoljnog stresa. Naravno, kao i sa svakim pravilom, ovde možete imati odstupanja. Primer može biti pisanje dnevnika na putovanju, kada želite nešto da zabeležite baš u trenutku haosa. Ja imam stari prenosivi laptop koji mi služi samo u potrebi pisanja, a nekada sam koristio svesku. Smatram da je lepo pisati olovkom ali potreba za efikasnošću me je navela da koristim isključivo taj laptop. Suplementiram sve to sveskama ili blokčićima, naročito kada pravim liste planiranih aktivnosti.
 
 Srećno pisanje!
+
+![thinkpad x230i sa ovom stranicom](/assets/dnevnik-thinkpad.png)
