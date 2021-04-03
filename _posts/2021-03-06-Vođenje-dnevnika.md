@@ -77,16 +77,14 @@ Za instalaciju je potreban `ruby`, i možete ispratiti njihova upustva za instal
 #!/bin/bash
 
 DATE="$(date +%F)"
-FILENAME="_drafts/journal/$DATE-$(date +"%A-%H:%M").md"
+FILENAME="_posts/$DATE-$(date +"%A").md"
 
 if [[ -f $FILENAME ]];then
     echo "$FILENAME exists"
 else
     touch $FILENAME
-    echo '---' >> $FILENAME
-    echo "date: $DATE" >> $FILENAME
-    echo -e 'tags:\ncategory: journal\n---\n' >> $FILENAME
+    echo -e "---\ndate: $DATE\n---\n" >> $FILENAME
 fi
 ```
 
-Ova skripta kreira ime fajla po današnjem datumu i popuni u fajlu metapodatke za datum i kategoriju journal. Meni ostaje samo da počnem sa pisanjem.
+Ova skripta kreira ime fajla po današnjem datumu i popuni u fajlu metapodatke za datum.
