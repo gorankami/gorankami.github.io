@@ -2,7 +2,7 @@
 layout: post
 title:  "React useContext: a portal to component data and behaviour"
 date:   2020-12-26
-categories: react
+category: react
 ---
 
 Before React 16.8, there were things that really bothered me in the way React Components were sharing data. 
