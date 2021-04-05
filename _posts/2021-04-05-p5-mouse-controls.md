@@ -3,11 +3,10 @@ date: 2021-04-05
 title: "P5 mouse controls"
 tags: p5 react javascript
 layout: post
-excerpt_separator: <!--more-->
+thumbnail: "/assets/2021-04-03-React-and-p5-thumb.png"
+description: "Handle panning and zooming with mouse, see how in this post"
 ---
 In this post, I am assuming the use of p5 in _instance_ mode.
-
-<!--more-->
 
 # Panning
 

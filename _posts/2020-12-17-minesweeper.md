@@ -1,10 +1,11 @@
 ---
 date: 2020-12-17
-tags: javascript jobs
+tags: javascript jobs game
 layout: post
 title:  "Building a minesweeper clone"
 category: projects
 thumbnail: "/assets/minesweeper-thumb.png"
+description: "Story how a job ad inspired me to build a conceptual minesweeper game with vanilla code"
 ---
 
 ![Minesweeper thumbnail](/assets/minesweeper-thumb.png)

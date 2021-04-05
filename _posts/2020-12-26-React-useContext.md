@@ -1,8 +1,11 @@
 ---
 layout: post
-title:  "React useContext: a portal to component data and behaviour"
+title:  "React Context API: a portal to component data and behaviour"
 date:   2020-12-26
-category: react
+category: tutorial
+tags: javascript react
+thumbnail: "/assets/2020-12-26-thumb.png"
+description: "Examples of how to utilize context API for different scenarios"
 ---
 
 Before React 16.8, there were things that really bothered me in the way React Components were sharing data. 
@@ -256,7 +259,7 @@ And takeaway from this example is that you can have application level data manag
 You can put the application data on top of the hierarchy and use it anywhere with `useContext`. 
 Cleanly. Is this familiar? Are we missing something?
 
-## I miss redux 💔
+## What if I miss redux? 💔
 
 Another beautiful hook `React` introduced is `useReducer`. Similar to `useState` but setter is a dispatch that a reducer function can receive.
 

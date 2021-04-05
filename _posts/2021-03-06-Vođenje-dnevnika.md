@@ -1,8 +1,9 @@
 ---
 date: 2021-03-06
-tags: srpski
+tags: 🇷🇸 srpski 
 category: life
-excerpt_separator: <!--more-->
+thumbnail: "/assets/dnevnik-thumb.png"
+description: "Pisanje je najbolji način za sređivanje misli. Shodno tome, vođenje dnevnika predstavlja možda najbolji način da se organizuje i planira privatni život."
 ---
 
 <style> 
@@ -16,8 +17,6 @@ img {
 Pisanje je najbolji način za sređivanje misli. Shodno tome, vođenje dnevnika predstavlja možda najbolji način da se organizuje i planira privatni život. Neki ljudi svesno ili nesvesno koriste pisanje kao pomoćno sredstvo za vredan dan. TODO liste, pisanje "da se ne bi zaboravilo", upisivanje događaja u google kalendar itd. Vođenje dnevnika se može smatrati alatom za organizovanje šire slike života. Pisanje dnevnika može biti razgovor sa samim sobom u kome se rešavaju konfuzne emocije u bezbednom okruženju, može biti praćenje važnih životnih detalja, ili jednostavno daje radost i uživanje u prenošenju misli na papir.
 
 ![dnevnik sveska](/assets/dnevnik-sveska.jpg)
-
-<!--more-->
 
 # Kako pisati
 
