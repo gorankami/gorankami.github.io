@@ -1,85 +1,130 @@
 ---
 layout: default
 ---
+{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+
+<style>
+  .post-list > li {
+    margin-bottom: 14px;
+  }
+
+  .post-list > li > h3 {
+    margin-bottom: 5px;
+  }
+
+  .post-meta {
+    display: inline-block;
+    min-width: 100px;
+  }
+
+  .post-link {
+    font-size: 1.2em;
+  }
+
+  .card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid #333;
+    border-radius: .25rem;
+  }
+
+  .card-body {
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      padding: 1.25rem;
+  }
+
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .col-sm-8 {
+    -ms-flex: 0 0 66.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 55%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .col-sm-4 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .post-card-image {
+    border-radius: 0.25rem;
+    width: 100%;
+    height: 100%;
+    filter: brightness(96%);
+    object-fit: cover;
+    vertical-align: middle;
+  }
+
+  img {
+      display: block;
+      max-width: 100%;
+      border-style: none;
+  }
+
+</style>
 <div class="home">
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-
-  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-
   {{ content }}
 
-
-  {% if site.paginate %}
-  {% assign posts = paginator.posts %}
-  {% else %}
   {% assign posts = site.posts %}
-  {% endif %}
 
-  {%- if posts.size > 0 -%}
-  {%- if page.list_title -%}
-  <h3 class="post-list-heading">{{ page.list_title }}</h3>
-  {%- endif -%}
   <ul class="post-list">
-    {%- for post in posts -%}
-    <li>
+    {% for post in posts -%}
+    {%- if post.category != "microblog" -%}
+    <li class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-8">
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
 
-      <a class="post-link" href="{{ post.url | relative_url }}">
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        {% if post.category %}
-        <span class="post-meta" style="font-weight: bold"> {{post.category}}</span>
-        {%- endif -%}
-      </a>
-      {%- if post.category == "microblog" -%}
-      {{ post.excerpt  }}
-      {%- else -%}
-      <h3>
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          {{ post.title | escape }}
-        </a>
-      </h3>
-      {%- if site.show_excerpts -%}
-      {{ post.excerpt }}
-      {%- endif -%}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+              
+            <p>{{ post.description }}</p>
 
-      {%- endif -%}
-      {% if post.tags.size > 0 %}
-      <span class="post-meta">
-        tags: {% for tag in post.tags %} {{ tag }} 
-        {% endfor %}
-      </span>
-      {%- endif -%}
-
+            {%- if post.category %}
+              <span class="post-meta">category: {{post.category}}</span>
+            {%- endif -%}
+            {% if post.tags.size > 0 %}
+            <span class="post-meta">
+              tags: {% for tag in post.tags %} {{ tag }} {% endfor %}
+            </span>
+            {%- endif -%}
+          </div>
+          {% if post.thumbnail %}
+            <div class="col-sm-4"><a class="post-link" href="{{ post.url | relative_url }}">
+              <img class="post-card-image" src="{{ post.thumbnail }}" /></a>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
     </li>
+    {%- endif -%}
     {%- endfor -%}
   </ul>
-
-  {% if site.paginate %}
-  <div class="pager">
-    <ul class="pagination">
-      {%- if paginator.previous_page %}
-      <li><a href="{{ paginator.previous_page_path | relative_url }}"
-          class="previous-page">{{ paginator.previous_page }}</a></li>
-      {%- else %}
-      <li>
-        <div class="pager-edge">•</div>
-      </li>
-      {%- endif %}
-      <li>
-        <div class="current-page">{{ paginator.page }}</div>
-      </li>
-      {%- if paginator.next_page %}
-      <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-      {%- else %}
-      <li>
-        <div class="pager-edge">•</div>
-      </li>
-      {%- endif %}
-    </ul>
-  </div>
-  {%- endif %}
-
-  {%- endif -%}
 </div>
