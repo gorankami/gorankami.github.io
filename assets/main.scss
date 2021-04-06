@@ -1,18 +1,21 @@
-@charset "utf-8";
+---
+---
 
-$brand-color:           #999999 !default;
+
+
+$brand-color:           orange !default;
 $brand-color-light:     lighten($brand-color, 5%) !default;
 $brand-color-dark:      darken($brand-color, 35%) !default;
 
 $site-title-color:      $brand-color-light !default;
-
-$text-color:            #bbbbbb !default;
-$background-color:      #181818 !default;
+$grey-color-dark:       #ddd !default;
+$text-color:            #ddd !default;
+$background-color:      #0e0e0e !default;
 $code-background-color: #212121 !default;
 
-$link-base-color:       #79b8ff !default;
+$link-base-color:       orange !default;
 $link-visited-color:    $link-base-color !default;
-$link-hover-color:      $text-color !default;
+$link-hover-color:      darken($brand-color, 35%)  !default;
 
 $border-color-01:       $brand-color-dark !default;
 $border-color-02:       $brand-color-light !default;
@@ -24,13 +27,26 @@ $table-header-bg-color: lighten($background-color, 10%) !default;
 $table-header-border:   lighten($background-color, 21%) !default;
 $table-border-color:    $border-color-01 !default;
 
+@import "minima";
 
-// Syntax highlighting styles should be adjusted appropriately for every "skin"
-// List of tokens: https://github.com/rouge-ruby/rouge/wiki/List-of-tokens
-// Some colors come from Material Theme Darker:
-// https://github.com/material-theme/vsc-material-theme/blob/master/scripts/generator/settings/specific/darker-hc.ts
-// https://github.com/material-theme/vsc-material-theme/blob/master/scripts/generator/color-set.ts
-// ----------------------------------------------------------------------------
+pre,
+code {
+  font-size: 0.9375em;
+  border: 1px solid $border-color-01;
+  border-radius: 3px;
+  background-color: $code-background-color;
+}
+
+.highlight {
+  border-radius: 3px;
+  background: $code-background-color;
+  @extend %vertical-rhythm;
+
+  .highlighter-rouge & {
+    background: $code-background-color;
+  }
+}
+
 
 .highlight {
   .c     { color: #545454; font-style: italic } // Comment
@@ -93,3 +109,4 @@ $table-border-color:    $border-color-01 !default;
   .vi    { color: #EEFFFF } // Name.Variable.Instance
   .il    { color: #F78C6C } // Literal.Number.Integer.Long
 }
+
