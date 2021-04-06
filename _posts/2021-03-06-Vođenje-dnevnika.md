@@ -1,6 +1,7 @@
 ---
+layout: post
 date: 2021-03-06
-tags: 🇷🇸 srpski 
+tags: srpski
 category: life
 thumbnail: "/assets/dnevnik-thumb.png"
 description: "Pisanje je najbolji način za sređivanje misli. Shodno tome, vođenje dnevnika predstavlja možda najbolji način da se organizuje i planira privatni život."
