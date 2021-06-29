@@ -36,25 +36,37 @@
     margin-left: -15px;
   }
 
-  .col-sm-8 {
-    -ms-flex: 0 0 66.666667%;
-    flex: 0 0 66.666667%;
-    max-width: 55%;
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+  @media only screen and (max-width: 1000px) {
+    .card-thumbnail {
+      display: none;
+    }
   }
 
-  .col-sm-4 {
-    -ms-flex: 0 0 33.333333%;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-    position: relative;
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+  @media only screen and (min-width: 1000px) {
+    body {
+      background-color: lightblue;
+    }
+    .card-text {
+      -ms-flex: 0 0 66.666667%;
+      flex: 0 0 66.666667%;
+      max-width: 55%;
+      position: relative;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    .card-thumbnail {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+      position: relative;
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
   }
+
 
   .post-card-image {
     border-radius: 0.25rem;
@@ -95,7 +107,7 @@
       <li class="card">
         <div class="card-body">
           <div class="row">
-            <div class="col-sm-8">
+            <div class="card-text">
       <h2 class="post-title">
         {%- assign post_url = post.url | relative_url -%}
         <a class="post-link" href="{{ post_url }}">
@@ -116,7 +128,7 @@
       </div>
     </div>
     {% if post.thumbnail %}
-      <div class="col-sm-4"><a class="post-link" href="{{ post.url | relative_url }}">
+      <div class="card-thumbnail"><a class="post-link" href="{{ post.url | relative_url }}">
         <img class="post-card-image" src="{{ post.thumbnail }}" /></a>
       </div>
     {%- endif -%}
