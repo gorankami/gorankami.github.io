@@ -43,9 +43,6 @@
   }
 
   @media only screen and (min-width: 1000px) {
-    body {
-      background-color: lightblue;
-    }
     .card-text {
       -ms-flex: 0 0 66.666667%;
       flex: 0 0 66.666667%;
@@ -95,7 +92,7 @@
   <!-- Post list links -->
   <ul class="post-list">
     {%- for post in paginator.posts -%}
-    
+
       {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
 
       {% assign article = post.content %}
