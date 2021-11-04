@@ -71,13 +71,13 @@ What about multiple multiline comments? You already can guess it:
 {% highlight json %}
 {
     "/** 1": "",
-    " * 1": "This is a multiline comment description",
-    " * 2": "of a variable",
+    " * 1.1": "This is a multiline comment description",
+    " * 1.2": "of a variable",
     "**/ 1": "",
     "name": "Peter",
     "/** 2": "",
-    " * 1": "This is a multiline comment description",
-    " * 2": "of a variable",
+    " * 2.1": "This is a multiline comment description",
+    " * 2.2": "of a variable",
     "**/ 2": "",
     "age": "23"
 }
