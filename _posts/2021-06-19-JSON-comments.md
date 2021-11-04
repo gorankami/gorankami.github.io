@@ -4,7 +4,7 @@ tags: javascript json
 layout: post
 title:  "JSON comments"
 category: microblog
-thumbnail: ""
+thumbnail: "/assets/ng-package-comments.png"
 description: "How to add comments to JSON"
 ---
 

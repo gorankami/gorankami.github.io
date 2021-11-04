@@ -1,0 +1,14 @@
+<style>
+    .site-brand-title {
+        font-size: 2rem;
+    }
+</style>
+
+<a class="site-brand-inner" rel="author" href="{{ "/" | relative_url }}">
+    <img class="site-favicon" title="{{ site.title | escape }}" src="{{ site.favicon }}" onerror="this.style.display='none'">
+    <span class="site-brand-title">{{ site.title | escape }}</span>
+</a>
+
+{% if site.twitter_username %}
+    <a href="https://www.twitter.com/{{ site.twitter_username }}" style="margin-left: 4rem;" target="_blank" title="Twitter"><i class="fa fa-3x fa-twitter-square" style="color: deepskyblue;"></i></a>
+{% endif %}
