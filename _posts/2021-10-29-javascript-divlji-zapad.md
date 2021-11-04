@@ -37,7 +37,7 @@ To me je navelo na neki zaključak: možda nema univerzalnog standarda baš zbog
 
 Sećam se studentskih dana, izmedju 2007 i 2011. Bila je jako zanimljiva podela između Windows i Linux korisnika, i znam da su to najuticaniji sistemi na stil pisanja zbog pravila OS ekosistema. Osetio sam da se neke stvari tu kose, na primer Windows nije bio case sensitive, pa kada student sa windows računarom, na kome aplikacija dobro kompajlira u konzoli, pošalje mejlom fajlove kolegama, linuksaši nisu uvek srećni. Očigledno je bilo da studenti sa windows računarima, među kojima sam i ja bio, moraju uvesti standarde imenovanja fajlova, kako bi ceo tim mogao funkcionisati dobro, iako ta pravila samom sebi ne dovodi nikakvu korist.
 
-Negde izmedju 2007 i 2011 sam takođe prvi put pravio MVC aplikacija pomoću IDE-a, fokus je bio da napravim MVC u Javi, C# ili PHP, dok dizajnerski deo obogatim malim javascript funkcijama da bih dodao malo dinamike, jQuery je jako pomagao, ali nisam razumeo potpuno kako funkcioniše taj jezik, nigde nisam imao popisana pravila kao što ih imam u primarnom jeziku, recimo C#. Svoje znanje o javascript-u sam stekao od kolega koji takođe nisu primarno javascript programeri, jer takvi programeri dolaze mnogo kasnije. Javascript je bio toliko nebitan, da je svako uvodio pravila iz svog primarnog jezika. Najsmešnije su mi bile rasprave C# i Java navijača oko toga da li blok uokviren vitičastim zagradama treba biti u novom redu ili ne, i kada su delili komade izvornog koda, uvek je proradio OCD ispravljanja tuđih pravila, često alatom za formatiranje preferiranog IDE-a. Primer na šta mislim:
+Negde izmedju 2007 i 2011 sam takođe prvi put pravio MVC aplikacije pomoću IDE-a, fokus je bio da napravim MVC u Javi, C# ili PHP, dok dizajnerski deo obogatim malim javascript funkcijama da bih dodao malo dinamike, jQuery je jako pomagao, ali nisam razumeo potpuno kako funkcioniše taj jezik, nigde nisam imao popisana pravila kao što ih imam u primarnom jeziku, recimo C#. Svoje znanje o javascript-u sam stekao od kolega koji takođe nisu primarno javascript programeri, jer takvi programeri dolaze mnogo kasnije. Javascript je bio toliko nebitan, da je svako uvodio pravila iz svog primarnog jezika. Najsmešnije su mi bile rasprave C# i Java navijača oko toga da li blok uokviren vitičastim zagradama treba biti u novom redu ili ne, i kada su delili komade izvornog koda, uvek je proradio OCD ispravljanja tuđih pravila, često alatom za formatiranje preferiranog IDE-a. Primer na šta mislim:
 
 ```C#
 //C# VisualStudio
@@ -61,7 +61,7 @@ class Greet() {
 
 U istom primeru se vidi razlika u korišćenju velikog ili malog početnog slova za metode klase.
 
-Ovo je ulazilo u stil pisanja javascript koda. Ukoliko IDE nije formatirao, programer će to uraditi - jer ljudski um ne voli promene navika.
+Ovo je ulazilo u stil pisanja javascript koda. Ukoliko IDE nije formatirao, programer će to ručno uraditi.
 
 Ako uzmemo u obzir koliko ljudi u javascript ulaze iz drugih jezika i navika, mogu intuitivno da zaključim da 
 
