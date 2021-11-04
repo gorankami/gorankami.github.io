@@ -71,7 +71,7 @@ Iako imamo jako opširno definisane coding standarde za neke biblioteke, međuso
 
 > javascript pravila pisanja su opinionated za organizacije, ali unopinionated za ceo ekosistem.
 
-možete mi tvitovati na [@covekzbrda](twitter.com/covekzbrda)
+Možete mi tvitovati zamerke na [@covekzbrda](https://www.twitter.com/{{ site.twitter_username }})
 
 
 <!-- 
