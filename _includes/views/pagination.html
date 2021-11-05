@@ -1,5 +1,6 @@
 <style>
   .card {
+    background-color: white;
     position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -8,17 +9,22 @@
     min-width: 0;
     word-wrap: break-word;
     background-clip: border-box;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     border: 1px solid #e3e3e3;
   }
 
-  html[data-theme="dark"] .card{
+  html[data-theme="dark"] .card {
     border: 1px solid #545454;
     background-color: #111;
   }
 
+  .page-content{
+    padding-top: 0.5em;
+  }
+
   .pagination .post-list > li {
     padding-bottom: 0px;
+    margin-bottom: 1em;
   }
 
   .card-body {
