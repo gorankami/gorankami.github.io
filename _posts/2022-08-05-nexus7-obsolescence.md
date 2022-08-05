@@ -10,10 +10,6 @@ description: "How I saved my Nexus 7 from planned obsolescence"
 
 ---
 
-
-
-# Device history
-
 Back in 2014, I bough a Nexus 7 tablet for around 150 euros. It was very affordable, considering what you get for the money. Unlike common tablets in that year, this device had a good reading resolution, multiple point and precise touch capabilites, and it was fast! I remember playing impressive games for the time, though, i mostly used it for reading, browsing, video watching and sometimes organizing tasks and calendar.
 
 <!--more-->
@@ -30,7 +26,7 @@ The solution I have found by accident is my friend mentioning installing Lineage
 
 The steps for installing Lineage OS are well described [here](https://wiki.lineageos.org/devices/flox/install), and I accompanied it with a video presentation from a youtuber Honosuseri ([see video here](https://www.youtube.com/watch?v=7vA_PYULwk0)).
 
-I had plenty of problems that were hard to solve. One was repartitioning. Repartitioning step was stuck on one point, I was waiting for half an hour, and then lost patience so I exited. That caused me to mess up the data from the point that I thought I bricked the device, but returning to native bootloader menu and removing cache enabled me to start from scratch. The setup was stuck again, but I waited a few more minutes before simply continuing with the process hoping averything would workout. And it did!
+I had plenty of problems that were hard to solve. One was repartitioning. Repartitioning step was stuck on one point, I was waiting for half an hour, and then lost patience so I exited. That caused me to mess up the data from the point that I thought I bricked the device, but returning to native bootloader menu and removing cache enabled me to start from scratch. The setup was stuck again, but I waited a few more minutes before simply continuing with the process hoping everything would workout. And it did!
 
 ![Nexus 7 with Lineage OS 18](/assets/2022-08-05-nexus7.jpg)
 
@@ -43,7 +39,7 @@ Simple native apps were slow as well, but not an anoyance (keyboard was working 
 
 # Conclusion
 
-I recently dug out a Nokia C3-00 from one of the boxes of old stuff, and it worked the same as before, even the battery lasts for a week. I really miss having a reliable cheap device, but we are stuck with perpetually buying very expencive devices that last for a short period. I am not happy with the modern experience of mobile devices having a lifespan of a fly.
+I recently dug out a Nokia C3-00 from one of the boxes of old stuff, and it worked the same as before, even the battery lasts for a week. I really miss having a reliable cheap device, but we are stuck with perpetually buying very expensive devices that last for a short period. I am not happy with the modern experience of mobile devices having a lifespan of a fly.
 
 I used to have a Nexus 4 that I bought used and it lasted a couple of years until I couldn't start it again. Then I bought a brand new Nexus 5 which suddenly died during a vacation, the morning before my flight to Cretes (caused me to pay extra during checking since my online checkin code was on the bricked phone). Most Nexus 5 devices die due to heat melting something on the motherboard. This anoyance caused me to buy an iPhone 6s which lasted for 3 or 4 years until the battery was barely lasting half a day.
 
