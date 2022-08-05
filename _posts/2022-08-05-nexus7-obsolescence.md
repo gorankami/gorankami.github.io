@@ -39,3 +39,14 @@ I had plenty of problems that were hard to solve. One was repartitioning. Repart
 The new installation definitely improved performance for simple apps, the apps build today are much more hungry for resources, which is evident using the webapps which can choke the tablet to unusability. 
 
 Simple native apps were slow as well, but not an anoyance (keyboard was working good enough). I had to disable animations to try to give it some more improvement. I did not think of a way I could effectively use this tablet, other than read, or play retro games. I have to note that reading is not as good once you tried modern devices with perfect screens that adapt lightning and colors to environment light and time of day, but the screen is 7 inches which is one of the comforts of reading in living room conditions. 
+
+
+# Conclusion
+
+I recently dug out a Nokia C3-00 from one of the boxes of old stuff, and it worked the same as before, even the battery lasts for a week. I really miss having a reliable cheap device, but we are stuck with perpetually buying very expencive devices that last for a short period. I am not happy with the modern experience of mobile devices having a lifespan of a fly.
+
+I used to have a Nexus 4 that I bought used and it lasted a couple of years until I couldn't start it again. Then I bought a brand new Nexus 5 which suddenly died during a vacation, the morning before my flight to Cretes (caused me to pay extra during checking since my online checkin code was on the bricked phone). Most Nexus 5 devices die due to heat melting something on the motherboard. This anoyance caused me to buy an iPhone 6s which lasted for 3 or 4 years until the battery was barely lasting half a day.
+
+I am currently using a Samsung Galaxy S10e that I bought back in 2019 (3 years ago), and battery is excelent but it starts feeling sluggish already. It was a premium device back then. It's either going to brick it self, or it's going to be so sluggish that I would have to install a custom ROM, or just get rid of it.
+
+[Any comments? Write a tweet response here](https://mobile.twitter.com/covekzbrda/status/1555476779833479169?t=XRfyojvaMRMevVXVCQpKOw&s=19)
