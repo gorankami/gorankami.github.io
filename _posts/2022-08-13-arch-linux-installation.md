@@ -51,3 +51,152 @@ I replaced my hard disk in the Thinkpad and live-booted arch from the USB drive.
 
 
 
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0   680M  1 loop /run/archiso/airootfs
+sda      8:0    0 447.1G  0 disk 
+├─sda1   8:1    0   579M  0 part 
+└─sda2   8:2    0 446.6G  0 part 
+sdb      8:16   1  14.7G  0 disk 
+├─sdb1   8:17   1   773M  0 part /run/archiso/bootmnt
+└─sdb2   8:18   1    13M  0 part 
+
+
+fdisk /dev/sda
+
+
+
+It asks you to input commands (typing `m` will give you a list of commands). I should note that changes to the hard disk will not happen until you explicitly use command `w`. So all I will be doing as I create partitions is add up a stack of commands that the tool will apply at the very end. 
+
+First I had to delete partitions, I had two of them, so I had to type `d` twice, the first time I was prompted for which partition do I want to delete, I typed `1`, second time there was no prompt.
+
+Printing with `p` gives me no partitions, so now I need to create them. I am planning to create four of them:
+
+1. Boot +200M - Holding the grubmenu
+2. Swap +12G - Swap memory
+3. Root +25G - Place for system and applications
+4. Home (default) - Space for user data
+
+For creating each of the partitions, I used the command `n`, used `primary` option typing `p`, using default setting for first sector, and using the size from the list above for the last sector (for example, typing `+200M` for 200 megabytes).
+
+When asked to remove filesystem signature, I typed `Y` to confirm. 
+
+Once I was done, i typed `w` and partitions were quickly created and I am back to the terminal input. My new device partition structure was (typing `lsblk`):
+
+
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0   680M  1 loop /run/archiso/airootfs
+sda      8:0    0 447.1G  0 disk 
+├─sda1   8:1    0   200M  0 part 
+├─sda2   8:2    0    12G  0 part 
+├─sda3   8:3    0    25G  0 part 
+└─sda4   8:4    0 409.9G  0 part 
+sdb      8:16   1  14.7G  0 disk 
+├─sdb1   8:17   1   773M  0 part /run/archiso/bootmnt
+└─sdb2   8:18   1    13M  0 part 
+
+Now, partitions should have filesystems on them. I am using command `mkfs.ext4` to create ext4 filesystems for boot, root and home partitions, so commands are as follows:
+
+``` sh
+mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/sda3
+mkfs.ext4 /dev/sda4
+```
+
+For the swap partition, I used this command:
+
+``` sh
+mkswap /dev/sda2
+swapon /dev/sda2
+```
+
+To install bootloader and arch to the hard disk, I should mount all the partitions in correct places.
+
+First mounting would be the root partition:
+
+``` sh
+mount /dev/sda3 /mnt
+```
+
+Once mounted, I created two directories for mounting boot and home:
+
+``` sh
+mkdir /mnt/home
+mkdir /mnt/boot
+
+mount /dev/sda1 /mnt/boot
+mount /dev/sda2 /mnt/home
+```
+
+You can check mount points by listing devices with `lsblk`.
+
+``` sh
+NAME   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0    7:0    0   680M  1 loop /run/archiso/airootfs
+sda      8:0    0 447.1G  0 disk 
+├─sda1   8:1    0   200M  0 part /mnt/boot
+├─sda2   8:2    0    12G  0 part [SWAP]
+├─sda3   8:3    0    25G  0 part /mnt
+└─sda4   8:4    0 409.9G  0 part /mnt/home
+sdb      8:16   1  14.7G  0 disk 
+├─sdb1   8:17   1   773M  0 part /run/archiso/bootmnt
+└─sdb2   8:18   1    13M  0 part 
+```
+
+The next command is the installation of archlinux using `pacstrap`. I am using `base` and `base-devel` for basic sets of packages, but you could append individual packages, I wanted to have `nano` installed, for example. I made sure my network cable was plugged in.
+
+``` sh
+pacstrap /mnt base base-devel nano
+```
+
+I generated fstab file for partitions: 
+
+``` sh
+genfstab -U /mnt >> /mnt/etc/fstab
+```
+
+Next, I switched my root to use the context of the new arch installation: 
+
+``` sh
+arch-chroot /mnt
+```
+
+I need a network manager, install and activate it:
+
+``` sh
+pacman -S networkmanager
+systemctl enable NetworkManager
+```
+
+For booting up, I have to install `grub`, and then install specific grub platform:
+
+``` sh
+pacman -S grub
+grub-install --target=i386-pc /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+I added a password for my root with `passwd`. 
+
+For setting up locale, i edited '/etc/locale.gen'. I uncommented the en_US and sr_RS (Serbian) locales.
+
+``` sh
+en_US.UTF-8 UTF-8  
+en_US ISO-8859-1  
+sr_RS UTF-8  
+sr_RS@latin UTF-8  
+```
+
+I applied command `locale-gen` to generate locales based on uncommented settings. I also set the default language in `/etc/locale.conf` (new file), adding:
+
+``` sh
+LANG=en-US.UTF8
+```
+
+Setting the local time zone, I linked Belgrade to `/etc/localtime`
+
+``` sh
+ln -sf /usr/share/zoneinfo/Europe/Belgrade /etc/localtime
+```
+
+Last thing I did is naming my computer for the network by editing `/etc/hostname` and adding `x230` in my case (It's the thinkpad model)
+
