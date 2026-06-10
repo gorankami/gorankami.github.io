@@ -38,9 +38,9 @@ It is small enough and containing code is clear enough that it is easy to quickl
 #### Commits are complete
 
 The commit is production ready, that is, if i take this commit and add it to production, it will not break functionality or lessen the user experience in any unwanted way. For example, one small commit would be one of the following:
-    * A button with its style and events completed, even though it is not yet used in the app.
-    * An API controller with a defined endpoint, working with all dependencies that are previously completed.
-    * An action event, not necessarily used anywhere yet, that has clearly defined action logic and data that it carries.
+ - A button with its style and events completed, even though it is not yet used in the app.
+ - An API controller with a defined endpoint, working with all dependencies that are previously completed.
+ - An action event, not necessarily used anywhere yet, that has clearly defined action logic and data that it carries.
 
 #### Commits are limited by upper size
 
